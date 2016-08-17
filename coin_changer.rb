@@ -8,16 +8,16 @@
 
 def money(change)
  
- coins_value = {:quarter => 25, :dime => 10, :nickle => 5, :penny => 1}
+	coins_value = {:quarter => 25, :dime => 10, :nickle => 5, :penny => 1}
 
- correct_change = {:quarter => 0, :dime => 0, :nickle => 0, :penny => 0}
+	correct_change = {:penny => 0, :nickle => 0, :dime => 0, :quarter => 0}
 
- coins_value.each do |coin, value|
-   if
-	value <= change
-    correct_change[coin] += 1
-    change -= value
-   end
-   end
- correct_change
+	coins_value.each do |coin, value|
+		while
+			value <= change
+	    	correct_change[coin] += 1
+	    	change -= value
+	    end
+	end
+  correct_change
 end
