@@ -10,4 +10,8 @@ class Coin_changer<Minitest::Test
 	def test_1_cents_returns_1_penny
 		assert_equal({:penny => 1}, generate_change(1))
 	end
+
+	def test_2_cents_returns_2_pennies
+		assert_equal({:penny => 1}, generate_change(1))
+	end
 end

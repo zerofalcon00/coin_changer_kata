@@ -1,7 +1,11 @@
 def generate_change(cents)
-	if cents == 0
-		{}
-	else
-		{:penny =>1}
-	end
+	
+
+	
+		if cents == 0
+			{}
+		else
+			{:penny => cents}
+		end
+	
 end
