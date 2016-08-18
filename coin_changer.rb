@@ -5,14 +5,21 @@
 #build your coin_changer using test. commit to git after every test.
 #{:key => value}
 
-
 def money(change)
  
-	coins_value = {:quarter => 25, :dime => 10, :nickle => 5, :penny => 1}
+	coins_value = {:quarter => 25, :dime => 10, :nickel => 5, :penny => 1}
 
-	correct_change = {:penny => 0, :nickle => 0, :dime => 0, :quarter => 0}
+	correct_change = {}
 
 	coins_value.each do |coin, value|
+		
+		if
+	   		value<=change
+		then
+			correct_change[coin] = 0
+		end
+
+
 		while
 			value <= change
 	    	correct_change[coin] += 1
