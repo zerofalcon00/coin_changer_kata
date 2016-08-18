@@ -19,7 +19,11 @@ class Coin_changer<Minitest::Test
 		assert_equal({:nickel => 1}, generate_change(5))
 	end
 
-	def test_8_cents_returns_hash_with_1_nickel_1_pennies
+	def test_6_cents_returns_hash_with_1_nickel_1_pennies
 		assert_equal({:nickel => 1, :penny => 1}, generate_change(6))
+	end
+
+	def test_9_cents_returns_hash_with_1_nickel_4_pennies
+		assert_equal({:nickel => 1, :penny => 4}, generate_change(9))
 	end
 end
