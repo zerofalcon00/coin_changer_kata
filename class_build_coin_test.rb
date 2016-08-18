@@ -34,4 +34,8 @@ class Coin_changer<Minitest::Test
 	def test_11_cents_returns_hash_with_1_dime_1_penny
 		assert_equal({:dime => 1, :penny => 1}, generate_change(11))
 	end
+
+	def test_15_cents_returns_hash_with_1_dime_1_nickel
+		assert_equal({:dime => 1, :nickel => 1}, generate_change(15))
+	end
 end
