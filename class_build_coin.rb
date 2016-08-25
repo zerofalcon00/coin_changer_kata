@@ -36,12 +36,15 @@ def generate_change(cents)
 		end
 
 		if cents >= nickel
-			change[:nickel] = cents / nickel
+			coins = cents / nickel
+			change[:nickel] = coins
 			cents = cents - nickel
 		end
 		
-		if cents > 0
-			change[:penny] = cents
+		if cents >= penny
+			coins = cents / penny
+			change[:penny] = coins
+			cents = cents - penny
 		end
 
 
